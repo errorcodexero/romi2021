@@ -65,5 +65,12 @@ tankdrive:follower:right:kd                                             0.0
 tankdrive:follower:turn_correction                                      0
 tankdrive:follower:angle_correction                                     0.0
 
+###########################################################################################
+#
+# Misc
+#
+###########################################################################################
 
+hw:driverstation:hid:driver                                             0               # HID Device Index for driver gamepad
 plotting:enabled                                                        true
+

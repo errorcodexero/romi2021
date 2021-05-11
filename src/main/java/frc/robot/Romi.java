@@ -8,7 +8,6 @@ import org.xero1425.base.XeroRobot;
 import org.xero1425.base.controllers.AutoController;
 import org.xero1425.misc.BadParameterTypeException;
 import org.xero1425.misc.MissingParameterException;
-import org.xero1425.misc.XeroPathType;
 
 /**
  * The VM is configured to automatically run this class, and to call the
