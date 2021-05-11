@@ -31,23 +31,8 @@ public class Romi extends XeroRobot {
     return new RomiAutoController(this);
   }
 
-  protected byte[] getPracticeBotMacAddress() {
-    return null;
-  }
-
   protected void hardwareInit() throws Exception {
     RomiRobotSubsystem robotsub = new RomiRobotSubsystem(this);
     setRobotSubsystem(robotsub);
-  }
-
-  protected void enableMessages() {
-  }
-
-  protected void loadPathsFile() throws Exception {
-    super.loadPathsFile();
-  }
-
-  protected XeroPathType getPathType() {
-    return XeroPathType.TankPathFollowing ;
   }
 }
