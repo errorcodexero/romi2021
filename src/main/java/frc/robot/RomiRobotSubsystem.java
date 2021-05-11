@@ -2,6 +2,7 @@ package frc.robot;
 
 import org.xero1425.base.RobotSubsystem;
 import org.xero1425.base.XeroRobot;
+import org.xero1425.base.oi.OISubsystem;
 import org.xero1425.base.tankdrive.TankDriveSubsystem;
 
 public class RomiRobotSubsystem extends RobotSubsystem {
@@ -10,6 +11,6 @@ public class RomiRobotSubsystem extends RobotSubsystem {
 
         TankDriveSubsystem db = new TankDriveSubsystem(this, "tankdrive", "tankdrive") ;
         addChild(db) ;
-        addChild(new RomiOISubsystem(this, db)) ;
+        addChild(new OISubsystem(this, "droidoi", db)) ;
     }
 }
