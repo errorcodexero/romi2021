@@ -19,8 +19,8 @@ public class RomiAutoMode extends AutoMode {
 
         TankDriveSubsystem db = ctrl.getRobot().getRobotSubsystem().getDB() ;
 
-        act = new DelayAction(ctrl.getRobot(), 6.0) ;
-        addAction(act);
+        // act = new DelayAction(ctrl.getRobot(), 6.0) ;
+        // addAction(act);
 
         act = new TankDriveFollowPathAction(db, "TestRomi_Straight", false) ;
         addSubActionPair(db, act, true);
