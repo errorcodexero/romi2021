@@ -21,7 +21,7 @@ tankdrive:verbose                                                       false
 #
 ###########################################################################################
 
-tankdrive:messages                                                      true
+tankdrive:messages                                                      false
 alarms:messages                                                         false
 xerorobot:messages                                                      false
 actions:messages                                                        true
