@@ -92,3 +92,16 @@ driver:zerolevel                                                        0.1
 
 plotting:enabled                                                        true
 
+###########################################################################################
+#
+# These control test modes for the robot.  They are used by the DroidTestTuneMode automode.  Note
+# this active value below is ignored if we are connected to the field.
+#
+###########################################################################################
+
+auto:testmode:active                                          true
+auto:testmode:which                                           0
+auto:testmode:distance                                        1800
+auto:testmode:power                                           0.1
+auto:testmode:duration                                        3
+auto:testmode:name                                           "Slalom_Path"
