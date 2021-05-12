@@ -46,23 +46,22 @@ hw:tankdrive:encoder:right:2                                            7
 
 hw:tankdrive:gyro                                                       "LSM6DS33"
 
-tankdrive:inches_per_tick                                               0.00601246292357961603042471078223
+tankdrive:inches_per_tick                                               0.0059996
 tankdrive:width                                                         5.55
-tankdrive:scrub                                                         1.0
 tankdrive:speedometer:linearsamples                                     4
 tankdrive:speedometer:angularsamples                                    2
+tankdrive:scrub                                                         1.0
 
-tankdrive:follower:left:ka                                              0.002624471
-tankdrive:follower:left:kv                                              0.02637896
+tankdrive:follower:left:ka                                              0.0027822
+tankdrive:follower:left:kv                                              0.027822
 tankdrive:follower:left:kp                                              0.1
 tankdrive:follower:left:kd                                              0.0
 
-tankdrive:follower:right:ka                                             0.002624471
-tankdrive:follower:right:kv                                             0.02637896
+tankdrive:follower:right:ka                                             0.0027822
+tankdrive:follower:right:kv                                             0.027822
 tankdrive:follower:right:kp                                             0.1
 tankdrive:follower:right:kd                                             0.0
 
-tankdrive:follower:turn_correction                                      0
 tankdrive:follower:angle_correction                                     0.0
 
 ###########################################################################################
@@ -100,8 +99,8 @@ plotting:enabled                                                        true
 ###########################################################################################
 
 auto:testmode:active                                          true
-auto:testmode:which                                           0
-auto:testmode:distance                                        1800
-auto:testmode:power                                           0.1
+auto:testmode:which                                           1
+auto:testmode:distance                                        3600
+auto:testmode:power                                           0.5
 auto:testmode:duration                                        3
 auto:testmode:name                                           "Slalom_Path"
