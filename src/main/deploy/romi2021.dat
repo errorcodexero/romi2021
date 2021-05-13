@@ -50,7 +50,7 @@ tankdrive:inches_per_tick                                               0.005999
 tankdrive:width                                                         5.55
 tankdrive:speedometer:linearsamples                                     4
 tankdrive:speedometer:angularsamples                                    2
-tankdrive:scrub                                                         1.0
+tankdrive:scrub                                                         1.1
 
 tankdrive:follower:left:ka                                              0.0027822
 tankdrive:follower:left:kv                                              0.027822
@@ -103,4 +103,4 @@ auto:testmode:which                                           1
 auto:testmode:distance                                        3600
 auto:testmode:power                                           0.5
 auto:testmode:duration                                        3
-auto:testmode:name                                           "Slalom_Path"
+auto:testmode:name                                           "Challenge_Barrell"

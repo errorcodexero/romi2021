@@ -1,0 +1,47 @@
+{
+    "_version": "2",
+    "groups": [
+        {
+            "name": "Challenge",
+            "paths": [
+                {
+                    "constraints": [
+                    ],
+                    "endangle": 0,
+                    "endangledelay": 0,
+                    "endvelocity": 0,
+                    "flags": [
+                    ],
+                    "markers": [
+                    ],
+                    "maxacceleration": 34,
+                    "maxcentripetal": 400,
+                    "maxjerk": 340,
+                    "maxvelocity": 34,
+                    "name": "Barrell",
+                    "points": [
+                        {
+                            "heading": 0,
+                            "x": 4.652406417112303,
+                            "y": 75.24064171122996
+                        },
+                        {
+                            "heading": -90,
+                            "x": 122.08556149732621,
+                            "y": 91.92513368983957
+                        },
+                        {
+                            "heading": -180,
+                            "x": 7.860962566844918,
+                            "y": 93.85026737967914
+                        }
+                    ],
+                    "startangle": 0,
+                    "startangledelay": 0,
+                    "startvelocity": 0
+                }
+            ]
+        }
+    ],
+    "outdir": "C:/cygwin64/home/bwg/robottools/romi2021/src/main/deploy/paths"
+}
