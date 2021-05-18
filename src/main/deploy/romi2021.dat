@@ -71,6 +71,7 @@ tankdrive:follower:angle_correction                                     -0.001
 ###########################################################################################
 
 hw:driverstation:hid:driver                                             0              
+oi:newdrive                                                             true            # Use the new cheesy poofs game pad driving
 
 driver:power:max                                                        1.0
 driver:power:default                                                    0.6
@@ -82,6 +83,17 @@ driver:power:nudge_straight                                             0.2
 driver:power:nudge_rotate                                               0.2
 driver:nudge_time                                                       0.05
 driver:zerolevel                                                        0.05
+
+newdrive:power:nudge_straight                                           0.2
+newdrive:power:nudge_rotate                                             0.2
+newdrive:nudge_time                                                     0.1
+newdrive:throttle:stick                                                 1
+newdrive:throttle:deadband                                              0.04
+newdrive:wheel:stick                                                    4
+newdrive:wheel:deadband                                                 0.035
+newdrive:wheel:nonlinearity                                             0.05
+newdrive:wheel:wheelgain                                                0.05
+newdrive:wheel:deltapower                                               0.01
 
 ###########################################################################################
 #
