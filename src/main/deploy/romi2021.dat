@@ -62,7 +62,7 @@ tankdrive:follower:right:kv                                             0.027822
 tankdrive:follower:right:kp                                             0.1
 tankdrive:follower:right:kd                                             0.0
 
-tankdrive:follower:angle_correction                                     -0.005
+tankdrive:follower:angle_correction                                     -0.001
 
 ###########################################################################################
 #
@@ -80,8 +80,8 @@ driver:power:slowby                                                     0.5
 driver:power:tolerance                                                  0.05
 driver:power:nudge_straight                                             0.2
 driver:power:nudge_rotate                                               0.2
-driver:nudge_time                                                       0.1
-driver:zerolevel                                                        0.1
+driver:nudge_time                                                       0.05
+driver:zerolevel                                                        0.05
 
 ###########################################################################################
 #
@@ -103,4 +103,4 @@ auto:testmode:which                                           2
 auto:testmode:distance                                        3600
 auto:testmode:power                                           0.5
 auto:testmode:duration                                        3
-auto:testmode:name                                           "Test_Straight"
+auto:testmode:name                                           "Test_Curve"
