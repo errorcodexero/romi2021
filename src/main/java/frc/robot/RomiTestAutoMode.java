@@ -2,8 +2,10 @@ package frc.robot;
 
 import org.xero1425.base.actions.InvalidActionRequest;
 import org.xero1425.base.controllers.TestAutoMode;
-import org.xero1425.base.tankdrive.TankDriveFollowPathAction;
+import org.xero1425.base.tankdrive.TankDrivePathFollowerAction;
 import org.xero1425.base.tankdrive.TankDrivePowerAction;
+import org.xero1425.base.tankdrive.TankDrivePurePursuitPathAction;
+import org.xero1425.base.tankdrive.TankDriveRamseteAction;
 import org.xero1425.base.tankdrive.TankDriveScrubCharAction;
 import org.xero1425.base.tankdrive.TankDriveSubsystem;
 import org.xero1425.misc.BadParameterTypeException;
@@ -28,8 +30,16 @@ public class RomiTestAutoMode extends TestAutoMode {
                 break ;                 
 
             case 2:         // Run the path follower to follow a named path
-                addSubActionPair(db, new TankDriveFollowPathAction(db, getNameParam(), false), true) ;
+                addSubActionPair(db, new TankDrivePathFollowerAction(db, getNameParam(), false), true) ;
                 break ;
+
+            case 3:         // Run the pure pursuit to follow a named path
+                addSubActionPair(db, new TankDrivePurePursuitPathAction(db, getNameParam(), false), true) ;
+                break ;
+
+            case 4:         // Run the pure pursuit to follow a named path
+                addSubActionPair(db, new TankDriveRamseteAction(db, getNameParam(), false), true) ;
+                break ;                
         }
     }
 }
