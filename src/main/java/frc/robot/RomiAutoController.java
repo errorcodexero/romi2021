@@ -2,6 +2,8 @@ package frc.robot;
 
 import org.xero1425.base.controllers.AutoController;
 import org.xero1425.misc.BadParameterTypeException;
+import org.xero1425.misc.MessageLogger;
+import org.xero1425.misc.MessageType;
 import org.xero1425.misc.MissingParameterException;
 
 public class RomiAutoController extends AutoController {
@@ -13,9 +15,38 @@ public class RomiAutoController extends AutoController {
 
         try {
             mode_ = new RomiAutoMode(this) ;
-            test_mode_ = new RomiTestAutoMode(this) ;
+        }
+        catch(MissingParameterException ex) {
+            MessageLogger logger = robot.getMessageLogger() ;
+            logger.startMessage(MessageType.Error) ;
+            logger.add("Missing parameter '" + ex.getParameter() + "' creating automode")  ;
+            logger.endMessage();
         }
         catch(Exception ex) {
+            MessageLogger logger = robot.getMessageLogger() ;
+            logger.startMessage(MessageType.Error) ;
+            logger.add("Exception thrown creating automode - " + ex.toString()) ;
+            logger.endMessage();
+
+            mode_ = null ;
+            test_mode_ = null ;
+        }
+
+        try {
+            test_mode_ = new RomiTestAutoMode(this) ;
+        }
+        catch(MissingParameterException ex) {
+            MessageLogger logger = robot.getMessageLogger() ;
+            logger.startMessage(MessageType.Error) ;
+            logger.add("Missing parameter '" + ex.getParameter() + "' creating test automode")  ;
+            logger.endMessage();
+        }
+        catch(Exception ex) {
+            MessageLogger logger = robot.getMessageLogger() ;
+            logger.startMessage(MessageType.Error) ;
+            logger.add("Exception thrown creating test automode - " + ex.toString()) ;
+            logger.endMessage();
+
             mode_ = null ;
             test_mode_ = null ;
         }

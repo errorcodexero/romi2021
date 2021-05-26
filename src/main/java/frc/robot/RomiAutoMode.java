@@ -7,9 +7,10 @@ import org.xero1425.base.controllers.AutoController;
 import org.xero1425.base.controllers.AutoMode;
 import org.xero1425.base.tankdrive.TankDrivePowerAction;
 import org.xero1425.base.tankdrive.TankDriveSubsystem;
+import org.xero1425.misc.MissingParameterException;
 
 public class RomiAutoMode extends AutoMode {
-    public RomiAutoMode(AutoController ctrl) throws InvalidActionRequest {
+    public RomiAutoMode(AutoController ctrl) throws InvalidActionRequest, MissingParameterException{
         super(ctrl, "RomiAutoMode") ;
         Action act ;
         TankDriveSubsystem db = ctrl.getRobot().getRobotSubsystem().getDB() ;

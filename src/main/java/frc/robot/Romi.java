@@ -19,7 +19,7 @@ import org.xero1425.misc.MissingParameterException;
 public class Romi extends XeroRobot {
 
   Romi() {
-    super(0.04);
+    super(0.02);
   }
 
   public String getName() {
