@@ -27,6 +27,7 @@ xerorobot:messages                                                      false
 actions:messages                                                        true
 pathmanager:messages                                                    false
 robot:messages                                                          false
+pathfollowing:messages                                                  false
 
 ###########################################################################################
 #
@@ -62,23 +63,13 @@ tankdrive:follower:right:kv                                             0.027822
 tankdrive:follower:right:kp                                             0.1
 tankdrive:follower:right:kd                                             0.0
 
-#
-# These numbers are multiplied by the angle error on the heading.  If the angle
-# error is negative, the robot is rotated clockwise versus the desired heading and the
-# left motor needs to be slowed down and the right motor needs to be sped up.  Since the 
-# angle is multiplied by the clockwise constant, the negative angle times the positive
-# constant will result in a negative heading adjustment.  This negative heading adjustment
-# will be added to the left side speed and subtracted from the right side speed.  Since item
-# is negative, this will in effect reduce the left side speed and increase the right side
-# speed.
-#
-# The opposite is true for the counter_clockwise number.  The positive constant below will be
-# multiplied by a positive angle error resulting in a positive heading adjustment value.  This
-# positive number will be added to the left side and substracted from the right side thus
-# increasing the speed of the left side and decreasing the speed of the right side.
-#
-tankdrive:follower:angle_correction:clockwise                           -0.001
-tankdrive:follower:angle_correction:counter_clockwise                   -0.001
+tankdrive:angle_correction:kp                                           0.002
+tankdrive:angle_correction:ki                                           0.0
+tankdrive:angle_correction:kd                                           0.0
+tankdrive:angle_correction:kf                                           0.0
+tankdrive:angle_correction:max                                          1.0
+tankdrive:angle_correction:min                                          -1.0
+tankdrive:angle_correction:imax                                         0.0
 
 tankdrive:ramsete:b                                                     2.0
 tankdrive:ramsete:zeta                                                  0.7
@@ -144,9 +135,9 @@ plotting:enabled                                                        true
 #
 ###########################################################################################
 
-auto:testmode:active                                          true
-auto:testmode:which                                           2
-auto:testmode:distance                                        3600
-auto:testmode:power                                           0.5
-auto:testmode:duration                                        3
-auto:testmode:name                                           "Challenge_PathA"
+testmode:active                                                    true
+testmode:which                                                     2
+testmode:distance                                                  3600
+testmode:power                                                     0.5
+testmode:duration                                                  3
+testmode:name                                                      "Test_Circle"

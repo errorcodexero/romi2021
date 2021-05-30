@@ -33,11 +33,11 @@ public class RomiTestAutoMode extends TestAutoMode {
                 addSubActionPair(db, new TankDrivePathFollowerAction(db, getNameParam(), false), true) ;
                 break ;
 
-            case 3:         // Run the pure pursuit to follow a named path
+            case 3:         // Run the pure pursuit controller to follow a named path
                 addSubActionPair(db, new TankDrivePurePursuitPathAction(db, getNameParam(), false), true) ;
                 break ;
 
-            case 4:         // Run the pure pursuit to follow a named path
+            case 4:         // Run the ramsete controller to follow a named path
                 addSubActionPair(db, new TankDriveRamseteAction(db, getNameParam(), false), true) ;
                 break ;                
         }

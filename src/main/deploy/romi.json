@@ -1,0 +1,161 @@
+{
+    "subsystems" : 
+    {
+        "tankdrive" : 
+        {
+            "verbose" : true,
+            "messages" : true,
+            "hw" : {
+                "practice" : {
+                    "motors" : {
+                        "left:type" : "romi",
+                        "left:id" : 0,
+                        "right:type" : "romi",
+                        "right:id" : 1,
+                        "right:inverted" : true
+                    },
+                    "encoders" : {
+                        "left:1" : 4,
+                        "left:2" : 5,
+                        "right:1" : 6,
+                        "right:2" : 7
+                    }
+                },
+                "competition" : {
+                    "motors" : {
+                        "left:type" : "romi",
+                        "left:id" : 0,
+                        "right:type" : "romi",
+                        "right:id" : 1,
+                        "right:inverted" : true
+                    },
+                    "encoders" : {
+                        "left:1" : 4,
+                        "left:2" : 5,
+                        "right:1" : 6,
+                        "right:2" : 7
+                    }
+                },
+                "gyro" : {
+                    "type" : "LSM6DS33"
+                }
+            },
+            "sw" : {
+                "practice" : {
+                    "width" : 5.55,
+                    "scrub" : 1.082,
+                    "inches_per_tick" : 0.0059996
+                },
+                "competition" : {
+                    "width" : 5.55,
+                    "scrub" : 1.082,
+                    "inches_per_tick" : 0.0059996                    
+                },
+                "linearsamples" : 4,
+                "angularsamples" : 2,
+                "follower" : {
+                    "left" : {
+                        "ka" : 0.002,
+                        "kv" : 0.027822,
+                        "kp" : 0.1,
+                        "kd" : 0.0
+                    },
+                    "right" : {
+                        "ka" : 0.002,
+                        "kv" : 0.027822,
+                        "kp" : 0.1,
+                        "kd" : 0.0
+                    }
+                },
+                "angle_correction" : {
+                    "kp" : 0.002,
+                    "ki" : 0.0,
+                    "kd" : 0.0,
+                    "kf" : 0.0,
+                    "max" : 1.0,
+                    "min" : -1.0,
+                    "imax" : 0.0
+                },
+                "ramsete" : {
+                    "b" : 2.0,
+                    "zeta" : 0.7
+                }
+            }
+        },
+        "oi" : {
+            "hw" : {
+                "driver" : 0,
+                "gunner" : 2
+            },
+            "sw" : {
+                "drivetype" : "drive1425",
+                "drive1425" : {
+                    "throttle" : {
+                        "max" : 1.0,
+                        "default" : 0.6
+                    },
+                    "wheel" : {
+                        "max" : 0.8,
+                        "default" : 0.4
+                    },
+                    "slowby" : 0.5,
+                    "tolerance" : 0.05,
+
+                    "zerolevel" : 0.05
+                } ,
+                "poofsdrive" : {
+                    "throttle" : {
+                        "stick" : 1,
+                        "deadband" : 0.04
+                    },
+                    "wheel" : {
+                        "stick" : 4,
+                        "deadband" : 0.035,
+                        "nonlinearity" : 0.05,
+                        "gain" : 0.05,
+                        "deltapower" : 0.01
+                    }
+                },
+                "nudges" : {
+                    "straight" : 0.2,
+                    "rotate" : 0.2,
+                    "time" : 0.05
+                }
+            }
+        },
+        "alarms" :
+        {
+            "messages" : false
+        }
+    },
+    "framework" :
+    {
+        "xerorobot" :
+        {
+            "messages" : false
+        },
+        "actions" :
+        {
+            "messages" : false
+        },
+        "pathmanager" :
+        {
+            "messages" : false
+        },
+        "pathfollowing" : 
+        {
+            "messages" : false
+        },
+        "plotting" : {
+            "enabled" : true
+        }
+    },
+    "testmode" : {
+        "active" : true,
+        "which" : 2,
+        "distance" : 3600,
+        "power" : 0.05,
+        "duration" : 3,
+        "name" : "Test_Circle"
+    }
+}
