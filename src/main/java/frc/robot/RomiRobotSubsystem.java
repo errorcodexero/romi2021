@@ -11,6 +11,6 @@ public class RomiRobotSubsystem extends RobotSubsystem {
 
         TankDriveSubsystem db = new TankDriveSubsystem(this, "tankdrive", "tankdrive") ;
         addChild(db) ;
-        addChild(new OISubsystem(this, "droidoi", db)) ;
+        addChild(new OISubsystem(this, "romioi", db)) ;
     }
 }

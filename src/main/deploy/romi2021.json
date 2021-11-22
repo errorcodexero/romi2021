@@ -1,0 +1,123 @@
+{
+    "system" : {
+        "plotting" : true,
+        "messages" : {
+            "actions" : true,
+            "tankdrive" : false,
+            "pathfollowing" : false
+        },
+        "verbose" : {
+            "bunnybot" : true,
+            "alarms" : false,
+            "tankdrive" : false,
+            "gamepiecemanipulator" : false,
+            "conveyor" : false,
+            "chute" : false,
+            "intake" : false,
+            "bunnybotoi" : false
+        }
+    },
+    "subsystems": {
+        "tankdrive" : {
+            "width" : 5.55,
+            "scrub" : 1.082,
+            "inches_per_tick" : 0.0059996,
+            "follower" : {
+                "left" : {
+                    "ka" : 0.002,
+                    "kv" : 0.027822,
+                    "kp" : 0.1,
+                    "kd" : 0.0
+                },
+                "right" : {
+                    "ka" : 0.002,
+                    "kv" : 0.027822,
+                    "kp" : 0.1,
+                    "kd" : 0.0
+                }
+            }, 
+            "angle_correction" : {
+                "kp" : 0.002,
+                "ki" : 0.0,
+                "kd" : 0.0,
+                "kf" : 0.0,
+                "min" : -1.0,
+                "max" : 1.0,
+                "imax" : 0.0
+            },
+            "ramsete" : {
+                "b" : 2.0,
+                "zeta" : 0.7,
+                "left" : {
+                    "kp" : 0.002,
+                    "ki" : 0.0,
+                    "kd" : 0.0,
+                    "kf" : 0.027822,
+                    "max" : 1.0,
+                    "min" : -1.0,
+                    "imax" : 0.0
+                },
+                "right" : {
+                    "kp" : 0.002,
+                    "ki" : 0.0,
+                    "kd" : 0.0,
+                    "kf" : 0.027822,
+                    "max" : 1.0,
+                    "min" : -1.0,
+                    "imax" : 0.0                    
+                }
+            },
+            "hw" : {
+                "gyro" : "LSM6DS33",
+                "left" : {
+                    "motors" : {
+                        "type" : "romi",
+                        "canid" : 0
+                    },
+                    "encoders" : {
+                        "1" : 4,
+                        "2" : 5
+                    }                    
+                },
+                "right" : {
+                    "motors" : {
+                        "type" : "talon_srx",
+                        "canid" : 1,
+                        "inverted" : true                        
+                    },
+                    "encoders" : {
+                        "1" : 6,
+                        "2" : 7
+                    }
+                }
+            }
+        },
+        "romioi" : {
+            "gamepad" : {
+                "index" : 0,
+                "power" : {
+                    "max" : 1.0,
+                    "default" : 0.6,
+                    "nudge_straight" : 0.2,
+                    "nudge_rotate" : 0.2,
+                    "slowby" : 0.5,
+                    "tolerance" : 0.05
+                },
+                "turn" : {
+                    "max" : 0.8,
+                    "default" : 0.4
+                },
+                "zerolevel" : 0.1,
+                "nudge_time" : 0.1
+            }
+        }
+    },
+    "testmode" : {
+        "enabled" : true,
+        "which" : 0,
+        "power" : 0.5,
+        "duration" : 5.0,
+        "distance" : 0.0,
+        "name" : "Test_U"
+    }    
+}
